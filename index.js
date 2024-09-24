@@ -4,7 +4,7 @@ const path = require("path");
 const TelegramBot = require("node-telegram-bot-api");
 
 const gameName = "Pocunitytelegram";
-const webURL = "poc-unity.glitch.me";
+const webURL = "lavish-cookie-collar.glitch.me";
 
 const server = express();
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
