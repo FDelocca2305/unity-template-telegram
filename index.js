@@ -3,7 +3,7 @@ const express = require("express");
 const path = require("path");
 const TelegramBot = require("node-telegram-bot-api");
 
-const gameName = "poc-unity-telegram";
+const gameName = "Pocunitytelegram";
 const webURL = "gusty-checkered-knee.glitch.me";
 
 const server = express();
