@@ -4,10 +4,21 @@
     {
       "src": "public/**",
       "use": "@vercel/static"
-    },
+    }
+  ],
+  "headers": [
     {
-      "src": "server.js",
-      "use": "@vercel/node"
+      "source": "/build/(.*).gz",
+      "headers": [
+        {
+          "key": "Content-Encoding",
+          "value": "gzip"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        }
+      ]
     }
   ],
   "routes": [
