@@ -53,13 +53,7 @@ bot.on("inline_query", function (iq) {
   ]);
 });
 
-server.use(express.static(path.join(__dirname, "public"), {
-  setHeaders: function (res, path) {
-    if (path.endsWith('.gz')) {
-      res.setHeader('Content-Encoding', 'gzip');
-    }
-  }
-}));
+server.use(express.static(path.join(__dirname, "public")));
 
 server.get("/highscore/:score", function (req, res, next) {
   if (!Object.hasOwnProperty.call(queries, req.query.id)) return next();
